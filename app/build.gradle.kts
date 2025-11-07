@@ -6,7 +6,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("com.github.ben-manes.versions")
-    id("com.google.devtools.ksp") version "2.2.20-2.0.3"
+    id("com.google.devtools.ksp") version "2.3.0"
     id("com.anthonycr.plugins.mezzanine") version "2.1.0"
 }
 
@@ -100,8 +100,8 @@ dependencies {
 
     // test dependencies
     testImplementation("junit:junit:4.13.2")
-    testImplementation("org.assertj:assertj-core:3.27.4")
-    testImplementation("org.mockito:mockito-core:5.19.0")
+    testImplementation("org.assertj:assertj-core:3.27.6")
+    testImplementation("org.mockito:mockito-core:5.20.0")
     testImplementation("com.nhaarman:mockito-kotlin:1.6.0") {
         exclude(group = "org.jetbrains.kotlin")
     }
@@ -130,7 +130,7 @@ dependencies {
     ksp("com.anthonycr.mezzanine:processor:$mezzanineVersion")
 
     // dependency injection
-    val daggerVersion = "2.57.1"
+    val daggerVersion = "2.57.2"
     implementation("com.google.dagger:dagger:$daggerVersion")
     kapt("com.google.dagger:dagger-compiler:$daggerVersion")
     compileOnly("javax.annotation:jsr250-api:1.0")
@@ -138,13 +138,13 @@ dependencies {
     // permissions
     implementation("com.guolindev.permissionx:permissionx:1.8.1")
 
-    implementation("com.squareup.okhttp3:okhttp:5.1.0")
+    implementation("com.squareup.okhttp3:okhttp:5.3.0")
 
     implementation("io.coil-kt.coil3:coil:3.3.0")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0")
 
     // rx
-    implementation("io.reactivex.rxjava3:rxjava:3.1.11")
+    implementation("io.reactivex.rxjava3:rxjava:3.1.12")
     implementation("io.reactivex.rxjava3:rxandroid:3.0.2")
     implementation("io.reactivex.rxjava3:rxkotlin:3.0.1")
 
@@ -152,7 +152,7 @@ dependencies {
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.14")
 
     // kotlin
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.2.20")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.2.21")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 
     implementation("com.github.veonadtech.prebid-android-sdk:mobile:0.0.7.7")
