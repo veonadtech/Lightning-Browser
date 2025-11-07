@@ -82,4 +82,8 @@ interface ViewDelegate {
 
     val progressView: ProgressBar
 
+    val adsBanner: FrameLayout
+
+    val adsBanner2: FrameLayout
+
 }

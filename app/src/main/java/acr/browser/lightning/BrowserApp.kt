@@ -16,12 +16,15 @@ import acr.browser.lightning.utils.LeakCanaryUtils
 import android.app.Application
 import android.os.Build
 import android.os.StrictMode
+import android.util.Log
 import android.webkit.WebView
 import io.reactivex.rxjava3.core.Scheduler
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.plugins.RxJavaPlugins
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
+import org.prebid.mobile.PrebidMobile
+import org.prebid.mobile.api.data.InitializationStatus
 import java.io.File
 import javax.inject.Inject
 import kotlin.system.exitProcess
@@ -57,6 +60,7 @@ class BrowserApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        initPrebid()
         if (BuildConfig.DEBUG) {
             StrictMode.setThreadPolicy(
                 StrictMode.ThreadPolicy.Builder()
@@ -142,5 +146,27 @@ class BrowserApp : Application() {
 
     companion object {
         private const val TAG = "BrowserApp"
+    }
+
+    private fun initPrebid() {
+        PrebidMobile.setPrebidServerAccountId("uz.beeline.odp")
+        PrebidMobile.setCustomStatusEndpoint("https://prebid.veonadx.com/status")
+        PrebidMobile.setTimeoutMillis(3000)
+        PrebidMobile.setCreativeFactoryTimeout(10000)
+        PrebidMobile.setCreativeFactoryTimeoutPreRenderContent(15000)
+        PrebidMobile.setShareGeoLocation(true)
+        PrebidMobile.setLogLevel(PrebidMobile.LogLevel.DEBUG)
+
+        PrebidMobile.initializeSdk(
+            this,
+            "https://prebid.veonadx.com/openrtb2/auction",
+            "https://dcdn.veonadx.com/sdk/uz.beeline.odp/config.json"
+        ) { status ->
+            if (status == InitializationStatus.SUCCEEDED) {
+                Log.d("AAAA", "SDK initialized successfully!")
+            } else {
+                Log.e("AAAA", "SDK initialization error: $status\n${status.description}")
+            }
+        }
     }
 }

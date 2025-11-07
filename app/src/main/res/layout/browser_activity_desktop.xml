@@ -27,6 +27,14 @@
                 android:clipToPadding="false"
                 android:fitsSystemWindows="true">
 
+                <FrameLayout
+                    android:id="@+id/ads_banner_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/desktop_tabs_list"
                     android:layout_width="match_parent"
@@ -38,7 +46,7 @@
                     android:overScrollMode="ifContentScrolls"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@id/ads_banner_2" />
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
@@ -125,11 +133,11 @@
                                 android:dropDownWidth="match_parent"
                                 android:gravity="start|center_vertical"
                                 android:hint="@string/search_hint"
-                                android:popupElevation="0dp"
                                 android:imeOptions="actionGo"
                                 android:importantForAutofill="no"
                                 android:inputType="textUri"
                                 android:maxLines="1"
+                                android:popupElevation="0dp"
                                 android:selectAllOnFocus="true"
                                 android:textColor="?attr/autoCompleteTitleColor"
                                 android:textColorHint="?attr/autoCompleteUrlColor"
@@ -155,6 +163,14 @@
                     </LinearLayout>
                 </androidx.appcompat.widget.Toolbar>
 
+                <FrameLayout
+                    android:id="@+id/ads_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
                 <ProgressBar
                     android:id="@+id/progress_view"
                     style="?android:attr/progressBarStyleHorizontal"
@@ -164,7 +180,7 @@
                     android:indeterminate="false"
                     android:max="100"
                     android:progressTint="@color/accent_color"
-                    app:layout_constraintBottom_toBottomOf="@id/toolbar"
+                    app:layout_constraintBottom_toBottomOf="@id/ads_banner"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 

@@ -12,8 +12,8 @@ buildscript {
 
     extra.apply {
         set("minSdkVersion", 21)
-        set("targetSdkVersion", 30)
-        set("buildToolsVersion", 30)
+        set("targetSdkVersion", 35)
+        set("buildToolsVersion", 35)
     }
 }
 
@@ -21,5 +21,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { setUrl("https://jitpack.io") }
     }
 }

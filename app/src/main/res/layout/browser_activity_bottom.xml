@@ -25,6 +25,12 @@
                 android:orientation="vertical">
 
                 <FrameLayout
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/ads_banner_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp" />
+
+                <FrameLayout
                     android:id="@+id/content_frame"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -54,6 +60,14 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+                    <FrameLayout
+                        android:id="@+id/ads_banner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/desktop_tabs_list" />
+
                     <androidx.appcompat.widget.Toolbar
                         android:id="@+id/toolbar"
                         android:layout_width="match_parent"
@@ -65,7 +79,7 @@
                         app:contentInsetStart="0dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/desktop_tabs_list">
+                        app:layout_constraintTop_toBottomOf="@id/ads_banner">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -178,9 +192,9 @@
                         android:indeterminate="false"
                         android:max="100"
                         android:progressTint="@color/accent_color"
-                        app:layout_constraintTop_toTopOf="@id/toolbar"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/toolbar" />
 
                     <View
                         android:id="@+id/toolbar_divider"
@@ -196,9 +210,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="?attr/dividerColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

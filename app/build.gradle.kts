@@ -154,6 +154,11 @@ dependencies {
     // kotlin
     implementation("org.jetbrains.kotlin:kotlin-stdlib:2.2.20")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
+
+    implementation("com.github.veonadtech.prebid-android-sdk:mobile:0.0.7.7")
+    implementation("com.github.veonadtech.prebid-android-sdk:core:0.0.7.7")
+    implementation("com.github.veonadtech.prebid-android-sdk:eventhandlers:0.0.7.7")
+    implementation("com.github.veonadtech.prebid-android-sdk:prebidorg:0.0.7.7")
 }
 
 mezzanine {

@@ -127,9 +127,9 @@
                                 android:hint="@string/search_hint"
                                 android:imeOptions="actionGo"
                                 android:importantForAutofill="no"
-                                android:popupElevation="0dp"
                                 android:inputType="textUri"
                                 android:maxLines="1"
+                                android:popupElevation="0dp"
                                 android:selectAllOnFocus="true"
                                 android:textColor="?attr/autoCompleteTitleColor"
                                 android:textColorHint="?attr/autoCompleteUrlColor"
@@ -155,6 +155,14 @@
                     </LinearLayout>
                 </androidx.appcompat.widget.Toolbar>
 
+                <FrameLayout
+                    android:id="@+id/ads_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
                 <ProgressBar
                     android:id="@+id/progress_view"
                     style="?android:attr/progressBarStyleHorizontal"
@@ -164,18 +172,18 @@
                     android:indeterminate="false"
                     android:max="100"
                     android:progressTint="@color/accent_color"
-                    app:layout_constraintBottom_toBottomOf="@id/toolbar"
+                    app:layout_constraintBottom_toBottomOf="@id/ads_banner"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
-                
+
                 <View
                     android:id="@+id/toolbar_divider"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="?attr/dividerColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <FrameLayout
@@ -237,6 +245,13 @@
                     app:srcCompat="@drawable/ic_action_delete"
                     app:tint="?attr/iconColor" />
             </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/ads_banner_2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal" />
+
         </LinearLayout>
 
         <LinearLayout

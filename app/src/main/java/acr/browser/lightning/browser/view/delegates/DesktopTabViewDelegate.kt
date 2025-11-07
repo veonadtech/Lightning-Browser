@@ -50,4 +50,6 @@ class DesktopTabViewDelegate(binding: BrowserActivityDesktopBinding) : ViewDeleg
     override val bookmarkBackButton: ImageView = binding.bookmarkBackButton
     override val searchSslStatus: ImageView = binding.searchSslStatus
     override val progressView: ProgressBar = binding.progressView
+    override val adsBanner: FrameLayout = binding.adsBanner
+    override val adsBanner2: FrameLayout = binding.adsBanner2
 }

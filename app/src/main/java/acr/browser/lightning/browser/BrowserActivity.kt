@@ -55,6 +55,7 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.Gravity
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -65,6 +66,7 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.DrawableRes
@@ -73,11 +75,26 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SimpleItemAnimator
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import org.prebid.mobile.AdSize
+import org.prebid.mobile.api.exceptions.AdException
+import org.prebid.mobile.api.rendering.BannerView
+import org.prebid.mobile.api.rendering.InterstitialAdUnit
+import org.prebid.mobile.api.rendering.listeners.InterstitialAdUnitListener
+import org.prebid.mobile.eventhandlers.GamBannerEventHandler
+import org.prebid.mobile.eventhandlers.GamInterstitialEventHandler
 import javax.inject.Inject
+
+private const val CONFIG_ID_BANNER = "beeline_uz_android_manual_veon_test_320x50"
+private const val AD_UNIT_ID_BANNER = "/23081467975/beeline_uzbekistan_android/beeline_uz_android_universal_320x50"
+private const val CONFIG_ID_INTERSTITIAL = "beeline_uz_android_wheel_test2_interstitial"
+private const val AD_UNIT_ID_INTERSTITIAL = "/23081467975/beeline_uzbekistan_android/beeline_uz_android_universal_interstitial"
 
 /**
  * The base browser activity that governs the browsing experience for both default and incognito
@@ -327,7 +344,10 @@ abstract class BrowserActivity : ThemableBrowserActivity() {
         }
         binding.search.setAdapter(suggestionsAdapter)
         val searchListener = SearchListener(
-            onConfirm = { presenter.onSearch(binding.search.text.toString()) },
+            onConfirm = {
+                presenter.onSearch(binding.search.text.toString())
+                loadAdsInterstitial()
+            },
             inputMethodManager = inputMethodManager
         )
         binding.search.setOnEditorActionListener(searchListener)
@@ -363,6 +383,60 @@ abstract class BrowserActivity : ThemableBrowserActivity() {
         onBackPressedDispatcher.addCallback {
             presenter.onNavigateBack()
         }
+
+        loadAdsBanner()
+    }
+
+    private fun loadAdsBanner() {
+        lifecycleScope.launch {
+            delay(2000)
+            val eventHandler = GamBannerEventHandler(this@BrowserActivity.baseContext, AD_UNIT_ID_BANNER, AdSize(320, 50))
+            val adUnit = BannerView(this@BrowserActivity.baseContext, CONFIG_ID_BANNER, eventHandler)
+            binding.adsBanner.addView(adUnit)
+            adUnit.loadAd()
+        }
+
+        lifecycleScope.launch {
+            delay(2000)
+            val eventHandler = GamBannerEventHandler(this@BrowserActivity.baseContext, AD_UNIT_ID_BANNER, AdSize(320, 50))
+            val adUnit = BannerView(this@BrowserActivity.baseContext, CONFIG_ID_BANNER, eventHandler)
+            binding.adsBanner2.addView(adUnit)
+            adUnit.loadAd()
+        }
+    }
+
+    private fun loadAdsInterstitial() {
+        // listener for wrapping GAM rendering
+        val eventHandler = GamInterstitialEventHandler(this, AD_UNIT_ID_INTERSTITIAL)
+
+        // configure banner placement
+        val adUnit = InterstitialAdUnit(this@BrowserActivity, CONFIG_ID_INTERSTITIAL, eventHandler)
+
+        // lister for custom tracking or custom display creative
+        adUnit.setInterstitialAdUnitListener(object : InterstitialAdUnitListener {
+            override fun onAdLoaded(interstitialAdUnit: InterstitialAdUnit?) {
+                adUnit.show()
+                Toast.makeText(this@BrowserActivity, "loaded", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onAdDisplayed(interstitialAdUnit: InterstitialAdUnit?) {
+                Toast.makeText(this@BrowserActivity, "displayed", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onAdFailed(interstitialAdUnit: InterstitialAdUnit?, exception: AdException?) {
+                Toast.makeText(this@BrowserActivity, "failed: $exception", Toast.LENGTH_SHORT).show()
+                Log.d("AAAA", "onAdFailed: $exception")
+            }
+
+            override fun onAdClicked(interstitialAdUnit: InterstitialAdUnit?) {
+                Toast.makeText(this@BrowserActivity, "clicked", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onAdClosed(interstitialAdUnit: InterstitialAdUnit?) {
+                Toast.makeText(this@BrowserActivity, "closed", Toast.LENGTH_SHORT).show()
+            }
+        })
+        adUnit.loadAd()
     }
 
     override fun onNewIntent(intent: Intent?) {
@@ -813,11 +887,11 @@ abstract class BrowserActivity : ThemableBrowserActivity() {
         if (enabled) {
             if (immersive) {
                 decor.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                    or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                    or View.SYSTEM_UI_FLAG_FULLSCREEN
-                    or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
+                        or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_FULLSCREEN
+                        or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
             } else {
                 decor.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
             }
