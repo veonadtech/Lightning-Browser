@@ -6,12 +6,12 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("com.github.ben-manes.versions")
-    id("com.google.devtools.ksp") version "2.3.0"
-    id("com.anthonycr.plugins.mezzanine") version "2.1.0"
+    id("com.google.devtools.ksp") version "2.3.3"
+    id("com.anthonycr.plugins.mezzanine") version "2.2.0"
 }
 
 android {
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 26
@@ -101,7 +101,7 @@ dependencies {
     // test dependencies
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.assertj:assertj-core:3.27.6")
-    testImplementation("org.mockito:mockito-core:5.20.0")
+    testImplementation("org.mockito:mockito-core:5.21.0")
     testImplementation("com.nhaarman:mockito-kotlin:1.6.0") {
         exclude(group = "org.jetbrains.kotlin")
     }
@@ -114,7 +114,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("com.google.android.material:material:1.13.0")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
-    implementation("androidx.core:core-ktx:1.16.0")
+    implementation("androidx.core:core-ktx:1.17.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation("androidx.fragment:fragment-ktx:1.8.9")
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
@@ -125,7 +125,7 @@ dependencies {
     implementation("org.jsoup:jsoup:1.21.2")
 
     // file reading
-    val mezzanineVersion = "2.1.0"
+    val mezzanineVersion = "2.2.0"
     implementation("com.anthonycr.mezzanine:core:$mezzanineVersion")
     ksp("com.anthonycr.mezzanine:processor:$mezzanineVersion")
 
@@ -138,7 +138,7 @@ dependencies {
     // permissions
     implementation("com.guolindev.permissionx:permissionx:1.8.1")
 
-    implementation("com.squareup.okhttp3:okhttp:5.3.0")
+    implementation("com.squareup.okhttp3:okhttp:5.3.2")
 
     implementation("io.coil-kt.coil3:coil:3.3.0")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0")
