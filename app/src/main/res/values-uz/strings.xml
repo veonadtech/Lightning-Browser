@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="app_name">Veon Browser</string>
+    <string name="action_new_tab">Yangi varaq</string>
+    <string name="action_share">Ulashish</string>
+    <string name="action_history">Tarix</string>
+    <string name="action_bookmarks">Xatcho\'plar</string>
+    <string name="action_downloads">Yuklanmalar</string>
+    <string name="action_add_bookmark">Xatcho\'p qo\'shish</string>
+    <string name="action_copy">Havolani nusxalash</string>
+    <string name="action_forward">Oldinga</string>
+    <string name="settings">Sozlamalar</string>
+    <string name="location">Joylashuvga ruxsat</string>
+    <string name="password">Parollarni saqlash</string>
+    <string name="agent">Foydalanuvchi agenti</string>
+    <string name="home">Bosh sahifa</string>
+    <string name="fullscreen">To\'liq ekran rejimi</string>
+    <string name="java">JavaScript-ni yoqish</string>
+    <string name="download">Yuklab olish joyi</string>
+    <string name="settings_advanced">Kengaytirilgan sozlamalar</string>
+    <string name="apache">Apache Litsenziyasi 2.0</string>
+    <string name="version">Ilova versiyasi</string>
+    <string name="cache">Chiqishda keshni tozalash</string>
+    <string name="reflow">Matnni qayta joylashtirish</string>
+    <string name="block">Rasmlarni bloklash</string>
+    <string name="window">Saytlarga yangi oyna ochishga ruxsat</string>
+    <string name="cookies">Cookie-larni yoqish</string>
+    <string name="size">Matn o\'lchami</string>
+    <string name="recommended">Tavsiya etilgan</string>
+    <string name="search">Qidiruv tizimi</string>
+    <string name="search_hint">Qidirish</string>
+    <string name="wideViewPort">Keng ko\'rinishdan foydalanish</string>
+    <string name="overViewMode">Sahifalarni umumiy ko\'rinishda yuklash</string>
+    <string name="restore">Boshlashda yo\'qolgan varaqlarni tiklash</string>
+    <string name="supported_browsers_title">Qo\'llab-quvvatlanadigan brauzerlar</string>
+    <string name="stock_browser">Standart brauzer</string>
+    <string name="stock_browser_unavailable">Standart brauzer topilmadi</string>
+    <string name="stock_browser_available">Qo\'llab-quvvatlanadigan standart brauzer topildi</string>
+    <string name="fullScreenOption">Ko\'rish vaqtida holat satrini yashirish</string>
+    <string name="clear_cookies">Brauzer cookie-larini tozalash</string>
+    <string name="clear_history">Brauzer tarixini tozalash</string>
+    <string name="dialog_image">Bu rasm bilan nima qilmoqchisiz?</string>
+    <string name="action_download">Yuklab olish</string>
+    <string name="action_open">Ochish</string>
+    <string name="dialog_link">Bu havola bilan nima qilmoqchisiz?</string>
+    <string name="dialog_title_share">Bu sahifani ulashish</string>
+    <string name="dialog_history_long_press">Bu tarix elementi bilan nima qilmoqchisiz?</string>
+    <string name="dialog_bookmark">Bu xatcho\'p bilan nima qilmoqchisiz?</string>
+    <string name="action_delete">O\'chirish</string>
+    <string name="action_blank">Bo\'sh sahifa</string>
+    <string name="agent_default">Standart</string>
+    <string name="agent_desktop">Kompyuter</string>
+    <string name="agent_mobile">Mobil</string>
+    <string name="agent_custom">Maxsus</string>
+    <string name="title_search_engine">Qidiruv tizimi</string>
+    <string name="action_ok">OK</string>
+    <string name="dialog_download">Bu faylni yuklab olmoqchimisiz? (%1$s)</string>
+    <string name="unknown_size">Noma\'lum o\'lcham</string>
+    <string name="action_cancel">Bekor qilish</string>
+    <string name="title_warning">Ogohlantirish</string>
+    <string name="dialog_adobe_not_installed">Adobe Flash Player topilmadi.\nIltimos, Flash Player-ni o\'rnating.</string>
+    <string name="title_user_agent">Foydalanuvchi agenti</string>
+    <string name="title_download_location">Yuklab olish joyi</string>
+    <string name="title_custom_homepage">Maxsus bosh sahifa</string>
+    <string name="action_webpage">Veb-sahifa</string>
+    <string name="title_clear_history">Tarixni tozalash</string>
+    <string name="title_clear_cookies">Cookie-larni tozalash</string>
+    <string name="dialog_history">Barcha brauzer tarixini tozalashni xohlaysizmi?</string>
+    <string name="dialog_cookies">Barcha brauzer cookie-larini tozalashni xohlaysizmi?</string>
+    <string name="action_yes">Ha</string>
+    <string name="action_no">Yo\'q</string>
+    <string name="title_text_size">Matn o\'lchami</string>
+    <string name="size_largest">Eng katta</string>
+    <string name="size_large">Katta</string>
+    <string name="size_normal">Oddiy</string>
+    <string name="size_small">Kichik</string>
+    <string name="size_smallest">Eng kichik</string>
+    <string name="title_error">Xato</string>
+    <string name="dialog_import_error">Xatcho\'plarni import qilish uchun brauzer topilmadi.</string>
+    <string name="hint_title">Sarlavha</string>
+    <string name="hint_url">URL</string>
+    <string name="title_edit_bookmark">Xatcho\'pni tahrirlash</string>
+    <string name="action_edit">Tahrirlash</string>
+    <string name="action_incognito">Yangi inkognito varaq</string>
+    <string name="action_homepage">Standart</string>
+    <string name="action_back">Orqaga</string>
+    <string name="action_find">Sahifada qidirish</string>
+    <string name="download_pending">Yuklab olish boshlanmoqda\u2026</string>
+    <string name="cannot_download">Faqat \"http\" yoki \"https\" URL-larni yuklab olish mumkin.</string>
+    <string name="problem_download">Noto\'g\'ri URL topildi, yuklab bo\'lmaydi</string>
+    <string name="problem_location_download">Ko\'rsatilgan joyga yuklab bo\'lmaydi</string>
+    <string name="download_no_sdcard_dlg_title">SD karta yo\'q</string>
+    <string name="download_no_sdcard_dlg_msg">Faylni yuklab olish uchun USB xotira talab qilinadi.</string>
+    <string name="download_sdcard_busy_dlg_title">USB xotira mavjud emas</string>
+    <string name="download_sdcard_busy_dlg_msg">Xotira band. Yuklab olishga ruxsat berish uchun bildirishnomada \'USB xotirani o\'chirish\' tugmasini bosing.</string>
+    <string name="incognito_cookies">Inkognito rejimida cookie-larni yoqish</string>
+    <string name="incognito_cookies_pie">Inkognito rejimi har bir seans yakunida qayta tiklanadigan alohida jarayonda ishlaydi. Inkognito cookie sozlamalari endi oddiy cookie sozlamalari bilan boshqariladi.</string>
+    <string name="action_manual">Qo\'lda</string>
+    <string name="action_auto">Avtomatik</string>
+    <string name="action_follow_me">Bog\'lanish</string>
+    <string name="url_twitter">twitter.com/RestainoAnthony</string>
+    <string name="clear_cache">Keshni tozalash</string>
+    <string name="message_cache_cleared">Kesh tozalandi</string>
+    <string name="message_import">Xatcho\'plar import qilindi</string>
+    <string name="message_clear_history">Tarix tozalandi</string>
+    <string name="message_cookies_cleared">Cookie-lar tozalandi</string>
+    <string name="max_tabs">Maksimal varaqlar soniga yetildi</string>
+    <string name="message_text_copied">Matn vaqtinchalik xotiraga nusxalandi</string>
+    <string name="message_link_copied">Havola vaqtinchalik xotiraga nusxalandi</string>
+    <string name="message_blocked_local">Mahalliy fayl yuklashdan bloklandi</string>
+    <string name="licenses">Ochiq manba litsenziyalari</string>
+    <string name="suggestion">Qidirish</string>
+
+    <!-- Ad block -->
+    <string name="block_ads">Reklamalarni bloklash</string>
+    <string name="block_ad_source">Hosts fayl manbasi</string>
+    <string name="block_ad_remote_refresh_frequency_description">Masofaviy hosts fayl uchun</string>
+    <string name="block_ad_refresh_now">Hosts-ni hozir yangilash</string>
+
+    <string name="block_ads_upsell_source">Tanlash uchun Lightning Plus-ga yangilang</string>
+
+    <string name="block_remote_frequency_daily">Kunlik</string>
+    <string name="block_remote_frequency_weekly">Haftalik</string>
+    <string name="block_remote_frequency_monthly">Oylik</string>
+
+    <string name="block_source_default">Standart hosts</string>
+    <string name="block_source_local">Mahalliy hosts fayl</string>
+    <string name="block_source_local_description">Fayl: %1$s</string>
+    <string name="block_source_remote">Masofaviy hosts fayl</string>
+    <string name="block_source_remote_description">URL: %1$s</string>
+
+    <!-- Common actions -->
+    <string name="action_message_canceled">Amal bekor qilindi.</string>
+
+    <!-- SSL warnings -->
+    <string name="ssl_warning_dont_ask_again">Bu ko\'rish seansida qayta so\'ramang.</string>
+    <string name="message_insecure_connection">Bu saytga ulanish xavfsiz emas:\n%1$s\nDavom etasizmi?</string>
+    <string name="message_certificate_date_invalid">Sertifikat sanasi noto\'g\'ri</string>
+    <string name="message_certificate_expired">Sertifikat muddati tugagan</string>
+    <string name="message_certificate_domain_mismatch">Sertifikatdagi domen sayt domeniga mos kelmaydi</string>
+    <string name="message_certificate_invalid">Sertifikat noto\'g\'ri</string>
+    <string name="message_certificate_not_yet_valid">Sertifikat hali kuchga kirmagan</string>
+    <string name="message_certificate_untrusted">Sertifikat ishonchli emas</string>
+
+    <!-- permissions request -->
+    <string name="title_permission_request">Ruxsat so\'rovi</string>
+    <string name="message_permission_request">%1$s\n\nquyidagilarni ishlatmoqchi:\n\n%2$s</string>
+
+    <string name="title_form_resubmission">Formani qayta yuborish</string>
+    <string name="message_form_resubmission">Ma\'lumotlarni qayta yuborishni xohlaysizmi?</string>
+    <string name="message_location">\nJoylashuvingizdan foydalanmoqchi</string>
+    <string name="action_allow">Ruxsat berish</string>
+    <string name="action_dont_allow">Ruxsat bermaslik</string>
+    <string name="title_sign_in">Kirish</string>
+    <string name="label_realm">Server xabari: %s</string>
+    <string name="hint_username">Foydalanuvchi nomi</string>
+    <string name="hint_password">Parol</string>
+    <string name="search_suggestions">Qidiruv takliflari</string>
+    <string name="powered_by_google">Google tomonidan ta\'minlangan</string>
+    <string name="powered_by_duck">DuckDuckGo tomonidan ta\'minlangan</string>
+    <string name="powered_by_baidu">Baidu tomonidan ta\'minlangan</string>
+    <string name="powered_by_naver">Naver tomonidan ta\'minlangan</string>
+    <string name="search_suggestions_off">Qidiruv takliflari yo\'q</string>
+    <string name="http_proxy">HTTP proksi</string>
+    <string name="manual_proxy">Qo\'lda proksi</string>
+    <string name="host">Host:</string>
+    <string name="port">Port:</string>
+    <string name="use_tor_prompt">Sizda Orbot o\'rnatilgan ko\'rinadi. Tor-dan foydalanmoqchimisiz?</string>
+    <string name="install_orbot">Tor orqali proksi qilish uchun Orbot-ni o\'rnating.</string>
+    <string name="yes">Ha</string>
+    <string name="no">Yo\'q</string>
+    <string name="clear_cookies_exit">Chiqishda cookie-larni tozalash</string>
+    <string name="clear_history_exit">Chiqishda tarixni tozalash</string>
+    <string name="folder_default">Standart</string>
+    <string name="folder_custom">Maxsus</string>
+    <string name="untitled">Nomsiz</string>
+    <string name="mpl_license">Mozilla Public License v. 2.0</string>
+    <string name="freeware">Bepul dastur</string>
+    <string name="android_open_source_project">Android Ochiq Manba Loyihasi</string>
+    <string name="hphosts_ad_server_list">hpHosts Reklama Serverlari Ro\'yxati</string>
+    <string name="reopening_recent_tab">Eski varaq qayta ochildi</string>
+    <string name="rendering_mode">Render rejimi</string>
+    <string name="name_inverted">Teskari</string>
+    <string name="name_grayscale">Kulrang</string>
+    <string name="name_inverted_grayscale">Teskari kulrang</string>
+    <string name="name_increase_contrast">Kontrastni oshirish</string>
+    <string name="name_normal">Oddiy</string>
+    <string name="sync_history">Tarixni Google bilan sinxronlash</string>
+    <string name="title_file_chooser">Fayl tanlash</string>
+    <string name="library_netcipher">NetCipher</string>
+    <string name="license_gnu">GNU Lesser General Public License</string>
+    <string name="export_bookmarks">Xatcho\'plarni zaxiraga eksport qilish</string>
+    <string name="import_backup">Zaxiradan xatcho\'plarni import qilish</string>
+    <string name="bookmark_export_path">Xatcho\'plar eksport qilindi</string>
+    <string name="bookmark_export_failure">Kechirasiz, xatcho\'plarni eksport qilib bo\'lmadi!</string>
+    <string name="bookmark_settings">Xatcho\'p sozlamalari</string>
+    <string name="import_bookmark_error">Fayldan xatcho\'plarni import qilib bo\'lmadi</string>
+    <string name="message_bookmark_added">Xatcho\'p qo\'shildi.</string>
+    <string name="title_chooser">Fayl tanlang</string>
+    <string name="settings_general">Umumiy sozlamalar</string>
+    <string name="settings_display">Ko\'rinish sozlamalari</string>
+    <string name="settings_privacy">Maxfiylik sozlamalari</string>
+    <string name="settings_about">Dastur haqida</string>
+    <string name="settings_about_explain">Versiya, muallif va litsenziya haqida ma\'lumot.</string>
+    <string name="close_tab">Joriy varaqni yopish</string>
+    <string name="close_all_tabs">Barcha varaqlarni yopish</string>
+    <string name="close_other_tabs">Boshqa varaqlarni yopish</string>
+    <string name="third_party">3-tomon cookie-larini bloklash</string>
+    <string name="color_mode">Rang rejimini yoqish</string>
+    <string name="loading">Yuklanmoqda&#8230;</string>
+    <string name="loading_failed">Sahifadan hech narsa yuklab bo\'lmadi.</string>
+    <string name="snacktory">Snacktory</string>
+    <string name="jsoup">jsoup: Java HTML Parser</string>
+    <string name="mit_license">MIT Litsenziyasi</string>
+    <string name="url_contents">URL maydoni tarkibi</string>
+    <string name="text_encoding">Matn kodlash</string>
+    <string name="invert_color">Rangni teskari qilish</string>
+    <string name="dark_theme">Qorong\'u mavzu</string>
+    <string name="settings_black_status_bar">Qora holat satri</string>
+    <string name="tabs">Varaqlar</string>
+    <string name="theme">Ilova mavzusi</string>
+    <string name="light_theme">Yorug\' mavzu</string>
+    <string name="black_theme">Qora mavzu (AMOLED)</string>
+    <string name="folder">Papka nomi</string>
+    <string name="action_folder">Papka</string>
+    <string name="action_rename">Qayta nomlash</string>
+    <string name="title_rename_folder">Papkani qayta nomlash</string>
+    <string name="dialog_folder">Bu papka bilan nima qilmoqchisiz?</string>
+    <string name="clear_web_storage">Veb xotirani tozalash</string>
+    <string name="clear_web_storage_exit">Chiqishda veb xotirani tozalash</string>
+    <string name="message_web_storage_cleared">Veb xotira tozalandi</string>
+    <string name="hosts_source">Hosts fayl reklama bloklash manbasi</string>
+    <string name="settings_adblock">Reklama bloklash sozlamalari</string>
+    <string name="tabs_in_drawer">Varaqlarni navigatsiya panelida ko\'rsatish</string>
+    <string name="swap_bookmarks_and_tabs">Xatcho\'p va varaq panellarini almashtirish</string>
+    <string name="do_not_track">\'Kuzatmaslik\' so\'rovini yuborish</string>
+    <string name="save_data">\'Ma\'lumotlarni saqlash\' so\'rovini yuborish</string>
+    <string name="remove_identifying_headers">Identifikatsiya sarlavhalarini olib tashlash</string>
+    <string name="webrtc_support">WebRTC qo\'llab-quvvatlash</string>
+    <string name="action_add_to_homescreen">Bosh ekranga qo\'shish</string>
+    <string name="message_added_to_homescreen">Yorliq bosh ekranga qo\'shildi</string>
+    <string name="shortcut_message_failed_to_add">Kechirasiz, sizning launcher yorliqlarni qo\'llab-quvvatlamaydi.</string>
+    <string name="action_delete_all_bookmarks">Barcha xatcho\'plarni o\'chirish</string>
+    <string name="upsell_plus_version">Reklamalarni bloklash uchun Lightning Plus-ga yangilang</string>
+    <string name="message_open_download_fail">Bu fayl endi mavjud emas</string>
+
+    <string name="tab_style_title">Varaq uslubi</string>
+    <string name="tab_style_desktop">Kompyuter</string>
+    <string name="tab_style_side_drawer">Yon panel</string>
+    <string name="tab_style_bottom_drawer">Pastki panel</string>
+
+    <string name="faq">TSS</string>
+    <string name="faq_description">Tez-tez so\'raladigan savollar</string>
+
+    <!-- debug strings -->
+    <string name="debug_title">Nosozliklarni tuzatish sozlamalari</string>
+    <string name="debug_leak_canary">LeakCanary</string>
+    <string name="app_restart">O\'zgarish kuchga kirishi uchun ilovani qayta ishga tushiring.</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_open_new_tab">Yangi varaqda ochish</string>
+    <string name="dialog_open_background_tab">Fonda varaqda ochish</string>
+    <string name="dialog_open_incognito_tab">Inkognito varaqda ochish</string>
+    <string name="dialog_remove_bookmark">Xatcho\'pni olib tashlash</string>
+    <string name="dialog_edit_bookmark">Xatcho\'pni tahrirlash</string>
+    <string name="dialog_remove_from_history">Tarixdan olib tashlash</string>
+    <string name="dialog_download_image">Rasmni yuklab olish</string>
+    <string name="dialog_copy_link">Havolani nusxalash</string>
+    <string name="dialog_rename_folder">Papkani qayta nomlash</string>
+    <string name="dialog_remove_folder">Papkani olib tashlash</string>
+    <string name="dialog_title_close_browser">Brauzerni yopish</string>
+    <string name="dialog_delete_download">Yuklanmani o\'chirish</string>
+    <string name="dialog_delete_all_downloads">Barcha yuklanmalarni o\'chirish</string>
+
+    <!-- Tools dialog -->
+    <string name="dialog_tools_title">Sahifa vositalari</string>
+    <string name="dialog_toggle_desktop">Kompyuter foydalanuvchi agentiga o\'tish</string>
+    <string name="dialog_adblock_enable_for_site">Sayt uchun reklama bloklashni yoqish</string>
+    <string name="dialog_adblock_disable_for_site">Sayt uchun reklama bloklashni o\'chirish</string>
+
+    <!-- Search Engines -->
+    <string name="search_engine_custom">Maxsus URL</string>
+    <string name="search_engine_google">Google</string>
+    <string name="search_engine_ask">Ask</string>
+    <string name="search_engine_bing">Bing</string>
+    <string name="search_engine_yahoo">Yahoo</string>
+    <string name="search_engine_startpage">StartPage</string>
+    <string name="search_engine_startpage_mobile">StartPage Mobile</string>
+    <string name="search_engine_duckduckgo">DuckDuckGo</string>
+    <string name="search_engine_duckduckgo_lite">DuckDuckGo Lite</string>
+    <string name="search_engine_baidu">Baidu</string>
+    <string name="search_engine_yandex">Yandex</string>
+    <string name="search_engine_naver">Naver</string>
+
+    <!-- Notifications -->
+    <plurals name="notification_incognito_running_title">
+        <item quantity="one">%1$d inkognito varaq ochiq</item>
+        <item quantity="other">%1$d inkognito varaq ochiq</item>
+    </plurals>
+    <string name="notification_incognito_running_message">Ochish uchun bosing</string>
+    <string name="notification_incognito_running_description">Davom etayotgan inkognito bildirishnomasi</string>
+
+    <!--Ad block -->
+    <string name="ad_block_load_failure">Reklama bloklash manbasidan hosts-ni yuklash muvaffaqiyatsiz.</string>
+
+    <string name="infinity">∞</string>
+
+    <!-- SSL -->
+    <string name="ssl_info_issued_by">Kim tomonidan berilgan</string>
+    <string name="ssl_info_issued_to">Kimga berilgan</string>
+    <string name="ssl_info_issued_on">Berilgan sana</string>
+    <string name="ssl_info_expires_on">Amal qilish muddati</string>
+
+    <!-- Search in page -->
+    <string name="search_in_page_query">\'%1$s\'</string>
+
+    <!-- Frozen tabs -->
+    <string name="tab_frozen">Muzlatilgan…</string>
+
+    <!-- Search -->
+    <string name="search_insert_suggestion">Taklifni kiritish</string>
+</resources>
