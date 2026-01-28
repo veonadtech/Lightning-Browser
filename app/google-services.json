@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "694268109749",
+    "project_id": "frisbee-veon",
+    "storage_bucket": "frisbee-veon.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694268109749:android:f597a9e1d0ae095149affc",
+        "android_client_info": {
+          "package_name": "com.veon.frisbee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD60lgEotQtiZBXOwfPkfj5MdIFIZpTgX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

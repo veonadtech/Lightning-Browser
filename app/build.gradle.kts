@@ -8,6 +8,7 @@ plugins {
     id("com.github.ben-manes.versions")
     id("com.google.devtools.ksp") version "2.3.3"
     id("com.anthonycr.plugins.mezzanine") version "2.2.0"
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -26,11 +27,11 @@ android {
         create("lightningPlus").apply {
             setRoot("src/LightningPlus")
         }
-        if (!isCi) {
+        /*if (!isCi) {
             create("lightningLite").apply {
                 setRoot("src/LightningLite")
             }
-        }
+        }*/
     }
 
     buildFeatures {
@@ -70,18 +71,18 @@ android {
         create("lightningPlus") {
             dimension = "capabilities"
             buildConfigField("boolean", "FULL_VERSION", "Boolean.parseBoolean(\"true\")")
-            applicationId = "acr.browser.lightning"
+            applicationId = "com.veon.frisbee"
             versionCode = 101
         }
 
-        if (!isCi) {
+/*        if (!isCi) {
             create("lightningLite") {
                 dimension = "capabilities"
                 buildConfigField("boolean", "FULL_VERSION", "Boolean.parseBoolean(\"false\")")
-                applicationId = "acr.browser.barebones"
+                applicationId = "com.veon.frisbee.lite"
                 versionCode = 102
             }
-        }
+        }*/
     }
     packaging {
         resources {
@@ -159,6 +160,10 @@ dependencies {
     implementation("com.github.veonadtech.prebid-android-sdk:core:0.1.1")
     implementation("com.github.veonadtech.prebid-android-sdk:eventhandlers:0.1.1")
     implementation("com.github.veonadtech.prebid-android-sdk:prebidorg:0.1.1")
+
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:34.8.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }
 
 mezzanine {

@@ -8,6 +8,7 @@ buildscript {
         classpath("com.android.tools.build:gradle:8.13.2")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.21")
         classpath("com.github.ben-manes:gradle-versions-plugin:0.53.0")
+        classpath("com.google.gms:google-services:4.4.4")
     }
 
     extra.apply {
