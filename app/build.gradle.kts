@@ -17,7 +17,7 @@ android {
     defaultConfig {
         minSdk = 26
         targetSdk = 35
-        versionName = "5.1.0"
+        versionName = "0.1.0"
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -72,7 +72,7 @@ android {
             dimension = "capabilities"
             buildConfigField("boolean", "FULL_VERSION", "Boolean.parseBoolean(\"true\")")
             applicationId = "com.veon.frisbee"
-            versionCode = 101
+            versionCode = 1
         }
 
 /*        if (!isCi) {
