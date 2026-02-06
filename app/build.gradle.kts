@@ -6,7 +6,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("com.github.ben-manes.versions")
-    id("com.google.devtools.ksp") version "2.3.3"
+    id("com.google.devtools.ksp") version "2.2.21-2.0.4"
     id("com.anthonycr.plugins.mezzanine") version "2.2.0"
     id("com.google.gms.google-services")
 }
@@ -108,6 +108,12 @@ dependencies {
     }
     testImplementation("org.robolectric:robolectric:4.16")
 
+    // Room database
+    val roomVersion = "2.7.1"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+
     // support libraries
     implementation("androidx.palette:palette-ktx:1.0.0")
     implementation("androidx.annotation:annotation:1.9.1")
@@ -115,6 +121,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("com.google.android.material:material:1.13.0")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.core:core-ktx:1.17.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation("androidx.fragment:fragment-ktx:1.8.9")

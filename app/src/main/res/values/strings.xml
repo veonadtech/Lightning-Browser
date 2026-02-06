@@ -342,4 +342,14 @@
 
     <!-- Search -->
     <string name="search_insert_suggestion">Insert suggestion</string>
+
+    <!-- Traffic stats -->
+    <string name="traffic_stats">Traffic</string>
+    <string name="traffic_session">Session:</string>
+    <string name="traffic_daily">Today:</string>
+    <string name="traffic_monthly">Month:</string>
+    <string name="traffic_wifi">WiFi</string>
+    <string name="traffic_mobile">Mobile</string>
+    <string name="traffic_roaming">Roaming</string>
+    <string name="traffic_unknown">Unknown</string>
 </resources>

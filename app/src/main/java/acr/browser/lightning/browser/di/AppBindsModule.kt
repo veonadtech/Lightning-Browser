@@ -16,6 +16,8 @@ import acr.browser.lightning.database.downloads.DownloadsDatabase
 import acr.browser.lightning.database.downloads.DownloadsRepository
 import acr.browser.lightning.database.history.HistoryDatabase
 import acr.browser.lightning.database.history.HistoryRepository
+import acr.browser.lightning.database.traffic.TrafficRepository
+import acr.browser.lightning.database.traffic.TrafficRepositoryImpl
 import acr.browser.lightning.ssl.SessionSslWarningPreferences
 import acr.browser.lightning.ssl.SslWarningPreferences
 import dagger.Binds
@@ -53,4 +55,7 @@ interface AppBindsModule {
 
     @Binds
     fun bindsHostsDataSourceProvider(preferencesHostsDataSourceProvider: PreferencesHostsDataSourceProvider): HostsDataSourceProvider
+
+    @Binds
+    fun bindsTrafficRepository(trafficRepositoryImpl: TrafficRepositoryImpl): TrafficRepository
 }

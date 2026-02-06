@@ -433,4 +433,12 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.drawerlayout.widget.DrawerLayout>
+
+    <include
+        layout="@layout/widget_traffic_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="8dp" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

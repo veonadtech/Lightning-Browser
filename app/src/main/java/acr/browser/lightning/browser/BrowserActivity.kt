@@ -35,6 +35,9 @@ import acr.browser.lightning.database.HistoryEntry
 import acr.browser.lightning.database.SearchSuggestion
 import acr.browser.lightning.database.WebPage
 import acr.browser.lightning.database.downloads.DownloadEntry
+import acr.browser.lightning.database.traffic.NetworkType
+import acr.browser.lightning.database.traffic.TrafficFormatter
+import acr.browser.lightning.database.traffic.TrafficMonitor
 import acr.browser.lightning.databinding.BrowserActivityBottomBinding
 import acr.browser.lightning.databinding.BrowserActivityDesktopBinding
 import acr.browser.lightning.databinding.BrowserActivityDrawerBinding
@@ -61,6 +64,7 @@ import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
+import android.view.MotionEvent
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
@@ -91,9 +95,9 @@ import org.prebid.mobile.eventhandlers.GamBannerEventHandler
 import org.prebid.mobile.eventhandlers.GamInterstitialEventHandler
 import javax.inject.Inject
 
-private const val CONFIG_ID_BANNER = "beeline_uz_android_manual_veon_test_320x50"
+private const val CONFIG_ID_BANNER = "beeline_uz_android_manual_prebid2_test_320x50"
 private const val AD_UNIT_ID_BANNER = "/23081467975/beeline_uzbekistan_android/beeline_uz_android_universal_320x50"
-private const val CONFIG_ID_INTERSTITIAL = "beeline_uz_android_wheel_test2_interstitial"
+private const val CONFIG_ID_INTERSTITIAL = "beeline_uz_android_universal_interstitial_test2"
 private const val AD_UNIT_ID_INTERSTITIAL = "/23081467975/beeline_uzbekistan_android/beeline_uz_android_universal_interstitial"
 
 /**
@@ -160,6 +164,9 @@ abstract class BrowserActivity : ThemableBrowserActivity() {
     @MainHandler
     @Inject
     internal lateinit var mainHandler: Handler
+
+    @Inject
+    internal lateinit var trafficMonitor: TrafficMonitor
 
     /**
      * True if the activity is operating in incognito mode, false otherwise.
@@ -385,13 +392,104 @@ abstract class BrowserActivity : ThemableBrowserActivity() {
         }
 
         loadAdsBanner()
+        startTrafficMonitoring()
+    }
+
+    private fun startTrafficMonitoring() {
+        trafficMonitor.startMonitoring()
+
+        // Observe traffic stats and update UI
+        lifecycleScope.launch {
+            trafficMonitor.trafficStats.collect { stats ->
+                binding.trafficSessionValue?.text = TrafficFormatter.format(stats.session)
+                binding.trafficDailyValue?.text = TrafficFormatter.format(stats.daily)
+                binding.trafficMonthlyValue?.text = TrafficFormatter.format(stats.monthly)
+            }
+        }
+
+        // Setup draggable FAB
+        setupDraggableTrafficFab()
+    }
+
+    private fun setupDraggableTrafficFab() {
+        val container = binding.trafficStatsContainer ?: return
+        val fab = binding.trafficFab ?: return
+        val popup = binding.trafficStatsCard ?: return
+
+        var dX = 0f
+        var dY = 0f
+        var lastAction = 0
+        var isDragging = false
+
+        fab.setOnTouchListener { view, event ->
+            when (event.actionMasked) {
+                MotionEvent.ACTION_DOWN -> {
+                    dX = container.x - event.rawX
+                    dY = container.y - event.rawY
+                    lastAction = MotionEvent.ACTION_DOWN
+                    isDragging = false
+                    true
+                }
+                MotionEvent.ACTION_MOVE -> {
+                    val newX = event.rawX + dX
+                    val newY = event.rawY + dY
+
+                    // Check if moved enough to be considered dragging
+                    if (!isDragging) {
+                        val deltaX = kotlin.math.abs(newX - container.x)
+                        val deltaY = kotlin.math.abs(newY - container.y)
+                        if (deltaX > 10 || deltaY > 10) {
+                            isDragging = true
+                            // Hide popup while dragging
+                            popup.visibility = View.GONE
+                        }
+                    }
+
+                    if (isDragging) {
+                        // Keep within screen bounds
+                        val parent = container.parent as View
+                        val maxX = parent.width - container.width
+                        val maxY = parent.height - container.height
+
+                        container.x = newX.coerceIn(0f, maxX.toFloat())
+                        container.y = newY.coerceIn(0f, maxY.toFloat())
+
+                        lastAction = MotionEvent.ACTION_MOVE
+                    }
+                    true
+                }
+                MotionEvent.ACTION_UP -> {
+                    if (!isDragging && lastAction == MotionEvent.ACTION_DOWN) {
+                        // It's a click - toggle popup
+                        toggleTrafficPopup()
+                    }
+                    true
+                }
+                else -> false
+            }
+        }
+
+        // Close popup when clicking outside
+        popup.setOnClickListener {
+            popup.visibility = View.GONE
+        }
+    }
+
+    private fun toggleTrafficPopup() {
+        val popup = binding.trafficStatsCard ?: return
+        popup.visibility = if (popup.visibility == View.VISIBLE) {
+            View.GONE
+        } else {
+            View.VISIBLE
+        }
     }
 
     private fun loadAdsBanner() {
         lifecycleScope.launch {
             delay(2000)
             val eventHandler = GamBannerEventHandler(this@BrowserActivity.baseContext, AD_UNIT_ID_BANNER, AdSize(320, 50))
-            val adUnit = BannerView(this@BrowserActivity.baseContext, CONFIG_ID_BANNER, eventHandler)
+            val adUnit = BannerView(this@BrowserActivity.baseContext, CONFIG_ID_BANNER, AdSize(320, 50))
+            adUnit.setAutoRefreshDelay(30)
             binding.adsBanner.addView(adUnit)
             adUnit.loadAd()
         }
@@ -399,7 +497,8 @@ abstract class BrowserActivity : ThemableBrowserActivity() {
         lifecycleScope.launch {
             delay(2000)
             val eventHandler = GamBannerEventHandler(this@BrowserActivity.baseContext, AD_UNIT_ID_BANNER, AdSize(320, 50))
-            val adUnit = BannerView(this@BrowserActivity.baseContext, CONFIG_ID_BANNER, eventHandler)
+            val adUnit = BannerView(this@BrowserActivity.baseContext, CONFIG_ID_BANNER, AdSize(320, 50))
+            adUnit.setAutoRefreshDelay(30)
             binding.adsBanner2.addView(adUnit)
             adUnit.loadAd()
         }
@@ -410,7 +509,7 @@ abstract class BrowserActivity : ThemableBrowserActivity() {
         val eventHandler = GamInterstitialEventHandler(this, AD_UNIT_ID_INTERSTITIAL)
 
         // configure banner placement
-        val adUnit = InterstitialAdUnit(this@BrowserActivity, CONFIG_ID_INTERSTITIAL, eventHandler)
+        val adUnit = InterstitialAdUnit(this@BrowserActivity, CONFIG_ID_INTERSTITIAL)
 
         // lister for custom tracking or custom display creative
         adUnit.setInterstitialAdUnitListener(object : InterstitialAdUnitListener {
@@ -446,6 +545,7 @@ abstract class BrowserActivity : ThemableBrowserActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        trafficMonitor.stopMonitoring()
         presenter.onViewDetached()
     }
 

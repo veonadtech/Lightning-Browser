@@ -2,12 +2,14 @@ package acr.browser.lightning.browser.view
 
 import acr.browser.lightning.icon.TabCountView
 import acr.browser.lightning.search.SearchView
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -85,5 +87,24 @@ interface ViewDelegate {
     val adsBanner: FrameLayout
 
     val adsBanner2: FrameLayout
+
+    // Traffic stats views
+    val trafficStatsContainer: FrameLayout?
+
+    val trafficFab: CardView?
+
+    val trafficStatsCard: CardView?
+
+    val trafficSessionValue: TextView?
+
+    val trafficDailyValue: TextView?
+
+    val trafficMonthlyValue: TextView?
+
+    val trafficNetworkType: TextView?
+
+    val trafficNetworkIcon: ImageView?
+
+    val trafficNetworkInfo: View?
 
 }

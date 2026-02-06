@@ -1,9 +1,11 @@
 package acr.browser.lightning.browser.view.delegates
 
+import acr.browser.lightning.R
 import acr.browser.lightning.browser.view.ViewDelegate
 import acr.browser.lightning.databinding.BrowserActivityDrawerBinding
 import acr.browser.lightning.icon.TabCountView
 import acr.browser.lightning.search.SearchView
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -11,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.drawerlayout.widget.DrawerLayout
@@ -52,5 +55,16 @@ class DrawerTabViewDelegate(binding: BrowserActivityDrawerBinding) : ViewDelegat
     override val progressView: ProgressBar = binding.progressView
     override val adsBanner: FrameLayout = binding.adsBanner
     override val adsBanner2: FrameLayout = binding.adsBanner2
+
+    // Traffic stats views
+    override val trafficStatsContainer: FrameLayout? = binding.root.findViewById(R.id.traffic_stats_container)
+    override val trafficFab: CardView? = binding.root.findViewById(R.id.traffic_fab)
+    override val trafficStatsCard: CardView? = binding.root.findViewById(R.id.traffic_stats_card)
+    override val trafficSessionValue: TextView? = binding.root.findViewById(R.id.traffic_session_value)
+    override val trafficDailyValue: TextView? = binding.root.findViewById(R.id.traffic_daily_value)
+    override val trafficMonthlyValue: TextView? = binding.root.findViewById(R.id.traffic_monthly_value)
+    override val trafficNetworkType: TextView? = binding.root.findViewById(R.id.traffic_network_type)
+    override val trafficNetworkIcon: ImageView? = binding.root.findViewById(R.id.traffic_network_icon)
+    override val trafficNetworkInfo: View? = binding.root.findViewById(R.id.traffic_network_info)
 }
 
