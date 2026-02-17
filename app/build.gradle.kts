@@ -5,6 +5,7 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.2.21"
     id("com.github.ben-manes.versions")
     id("com.google.devtools.ksp") version "2.2.21-2.0.4"
     id("com.anthonycr.plugins.mezzanine") version "2.2.0"
@@ -36,6 +37,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        compose = true
     }
 
     buildTypes {
@@ -128,6 +130,7 @@ dependencies {
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
     implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("androidx.webkit:webkit:1.14.0")
+    implementation("androidx.core:core-splashscreen:1.0.1")
 
     // html parsing for reading mode
     implementation("org.jsoup:jsoup:1.21.2")
@@ -171,6 +174,17 @@ dependencies {
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:34.8.0"))
     implementation("com.google.firebase:firebase-analytics")
+
+    // Jetpack Compose
+    val composeBom = platform("androidx.compose:compose-bom:2026.01.01")
+    implementation(composeBom)
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.activity:activity-compose:1.10.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.9.0")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
 
 mezzanine {

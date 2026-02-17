@@ -544,9 +544,9 @@ abstract class BrowserActivity : ThemableBrowserActivity() {
         adUnit.loadAd()
     }
 
-    override fun onNewIntent(intent: Intent?) {
-        intent?.let(intentExtractor::extractUrlFromIntent)?.let(presenter::onNewAction)
+    override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
+        intentExtractor.extractUrlFromIntent(intent)?.let(presenter::onNewAction)
     }
 
     override fun onDestroy() {

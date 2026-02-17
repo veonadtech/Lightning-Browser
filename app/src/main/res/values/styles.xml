@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Splash theme -->
+    <style name="Theme.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_screen</item>
+        <item name="postSplashScreenTheme">@style/Theme.Splash.Compose</item>
+    </style>
+
+    <style name="Theme.Splash.Compose" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/splash_background</item>
+        <item name="android:statusBarColor">@color/splash_background</item>
+        <item name="android:navigationBarColor">@color/splash_background</item>
+    </style>
+
     <!-- Settings themes -->
     <style name="Theme.SettingsTheme" parent="Theme.LightTheme">
         <item name="android:windowBackground">@null</item>

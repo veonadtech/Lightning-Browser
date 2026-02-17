@@ -34,9 +34,9 @@
         android:name=".BrowserApp"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_launcher_background"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:taskAffinity="com.anthonycr.browser.AffinityDefault"
         android:usesCleartextTraffic="true">
         <meta-data
@@ -45,6 +45,16 @@
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />
+
+        <activity
+            android:name="acr.browser.lightning.ui.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name="acr.browser.lightning.DefaultBrowserActivity"
@@ -60,7 +70,6 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.APP_BROWSER" />
             </intent-filter>
