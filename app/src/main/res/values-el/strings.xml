@@ -149,4 +149,16 @@
     <string name="settings_privacy">Ρυθμίσεις ιδιωτικότητας</string>
     <string name="settings_about">Σχετικά</string>
     <string name="settings_about_explain">Λεπτομέρειες για την έκδοση, τον συγγραφέα και τις άδειες.</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Καλώς ήρθατε στο πρόγραμμα περιήγησης</string>
+    <string name="agreement_welcome_description">Πριν ξεκινήσετε, παρακαλούμε διαβάστε και αποδεχτείτε τη συμφωνία χρήστη.</string>
+    <string name="agreement_internet_conditions_title">Όροι χρήσης διαδικτύου:</string>
+    <string name="agreement_beeline_condition">Για τους συνδρομητές Beeline, το διαδίκτυο στο πρόγραμμα περιήγησης παρέχεται δωρεάν κατά τη χρήση του οικιακού δικτύου (όχι σε περιαγωγή)</string>
+    <string name="agreement_other_operators_condition">Για τους συνδρομητές άλλων παρόχων, η κίνηση διαδικτύου χρεώνεται σύμφωνα με τους όρους του τιμολογιακού τους πλάνου.</string>
+    <string name="agreement_user_agreement">Συμφωνία χρήστη</string>
+    <string name="agreement_checkbox_label">Συμφωνώ με τη Συμφωνία χρήστη</string>
+    <string name="agreement_confirm">Επιβεβαίωση</string>
+    <string name="agreement_detail_title">ΟΡΟΙ ΕΠΕΞΕΡΓΑΣΙΑΣ ΠΡΟΣΩΠΙΚΩΝ ΔΕΔΟΜΕΝΩΝ</string>
+    <string name="agreement_detail_agree_button">ΣΥΜΦΩΝΩ ΚΑΙ ΕΠΙΒΕΒΑΙΩΝΩ</string>
 </resources>

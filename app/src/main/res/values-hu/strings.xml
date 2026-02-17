@@ -226,4 +226,16 @@
     <string name="action_add_to_homescreen">Hozzáadás a kezdőképernyőhöz</string>
     <string name="message_added_to_homescreen">Parancsikon hozzáadva a kezdőképernyőhöz</string>
     <string name="action_delete_all_bookmarks">Összes könyvjelző törlése</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Üdvözöljük a böngészőben</string>
+    <string name="agreement_welcome_description">A használat megkezdése előtt kérjük, olvassa el és fogadja el a felhasználói megállapodást.</string>
+    <string name="agreement_internet_conditions_title">Internethasználati feltételek:</string>
+    <string name="agreement_beeline_condition">A Beeline előfizetők számára a böngészőben az internet ingyenes az otthoni hálózat használatakor (nem roaming)</string>
+    <string name="agreement_other_operators_condition">Más szolgáltatók előfizetői számára az internetes forgalom a díjcsomag feltételei szerint kerül felszámításra.</string>
+    <string name="agreement_user_agreement">Felhasználói megállapodás</string>
+    <string name="agreement_checkbox_label">Elfogadom a Felhasználói megállapodást</string>
+    <string name="agreement_confirm">Megerősítés</string>
+    <string name="agreement_detail_title">SZEMÉLYES ADATOK FELDOLGOZÁSÁNAK FELTÉTELEI</string>
+    <string name="agreement_detail_agree_button">ELFOGADOM ÉS MEGERŐSÍTEM</string>
 </resources>

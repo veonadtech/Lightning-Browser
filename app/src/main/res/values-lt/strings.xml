@@ -39,4 +39,16 @@
     <string name="no">Ne</string>
     <string name="name_normal">Normalus</string>
     <string name="port">Portas:</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Sveiki atvykę į naršyklę</string>
+    <string name="agreement_welcome_description">Prieš pradėdami, prašome perskaityti ir priimti naudotojo sutartį.</string>
+    <string name="agreement_internet_conditions_title">Interneto naudojimo sąlygos:</string>
+    <string name="agreement_beeline_condition">Beeline abonentams internetas naršyklėje teikiamas nemokamai naudojant namų tinklą (ne tarptinklinio ryšio metu)</string>
+    <string name="agreement_other_operators_condition">Kitų operatorių abonentams interneto srautas apmokestinamas pagal jų tarifo plano sąlygas.</string>
+    <string name="agreement_user_agreement">Naudotojo sutartis</string>
+    <string name="agreement_checkbox_label">Sutinku su Naudotojo sutartimi</string>
+    <string name="agreement_confirm">Patvirtinti</string>
+    <string name="agreement_detail_title">ASMENS DUOMENŲ TVARKYMO SĄLYGOS</string>
+    <string name="agreement_detail_agree_button">SUTINKU IR PATVIRTINU</string>
 </resources>

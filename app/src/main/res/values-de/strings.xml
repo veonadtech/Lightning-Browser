@@ -275,4 +275,16 @@
     </plurals>
     <string name="notification_incognito_running_message">Inkognito-Tab anzeigen</string>
     <string name="notification_incognito_running_description">Dauerhafte Inkognito-Benachrichtigung</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Willkommen im Browser</string>
+    <string name="agreement_welcome_description">Bitte lesen und akzeptieren Sie vor der Nutzung die Nutzungsvereinbarung.</string>
+    <string name="agreement_internet_conditions_title">Internetnutzungsbedingungen:</string>
+    <string name="agreement_beeline_condition">Für Beeline-Abonnenten ist das Internet im Browser bei Nutzung des Heimnetzwerks kostenlos (nicht im Roaming)</string>
+    <string name="agreement_other_operators_condition">Für Abonnenten anderer Anbieter wird der Internetverkehr gemäß den Bedingungen ihres Tarifplans berechnet.</string>
+    <string name="agreement_user_agreement">Nutzungsvereinbarung</string>
+    <string name="agreement_checkbox_label">Ich stimme der Nutzungsvereinbarung zu</string>
+    <string name="agreement_confirm">Bestätigen</string>
+    <string name="agreement_detail_title">BEDINGUNGEN DER VERARBEITUNG PERSONENBEZOGENER DATEN</string>
+    <string name="agreement_detail_agree_button">ZUSTIMMEN UND BESTÄTIGEN</string>
 </resources>

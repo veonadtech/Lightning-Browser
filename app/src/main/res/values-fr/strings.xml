@@ -252,4 +252,16 @@
     <string name="dialog_rename_folder">Renommer de dossier</string>
     <string name="dialog_remove_folder">Supprimer le dossier</string>
     <string name="dialog_title_close_browser">Fermer le navigateur</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Bienvenue dans le navigateur</string>
+    <string name="agreement_welcome_description">Avant de commencer, veuillez lire et accepter le contrat utilisateur.</string>
+    <string name="agreement_internet_conditions_title">Conditions d\'utilisation d\'internet :</string>
+    <string name="agreement_beeline_condition">Pour les abonnés Beeline, l\'internet dans le navigateur est fourni gratuitement lors de l\'utilisation du réseau domestique (pas en itinérance)</string>
+    <string name="agreement_other_operators_condition">Pour les abonnés d\'autres opérateurs, le trafic internet est facturé selon les conditions de leur forfait.</string>
+    <string name="agreement_user_agreement">Contrat utilisateur</string>
+    <string name="agreement_checkbox_label">J\'accepte le Contrat utilisateur</string>
+    <string name="agreement_confirm">Confirmer</string>
+    <string name="agreement_detail_title">CONDITIONS DE TRAITEMENT DES DONNÉES PERSONNELLES</string>
+    <string name="agreement_detail_agree_button">ACCEPTER ET CONFIRMER</string>
 </resources>

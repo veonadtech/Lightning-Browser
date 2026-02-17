@@ -250,4 +250,16 @@
     <string name="dialog_rename_folder">Rinomina cartella</string>
     <string name="dialog_remove_folder">Rimuovi cartella</string>
     <string name="dialog_title_close_browser">Chiudi browser</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Benvenuto nel browser</string>
+    <string name="agreement_welcome_description">Prima di iniziare, leggi e accetta l\'accordo utente.</string>
+    <string name="agreement_internet_conditions_title">Condizioni di utilizzo di internet:</string>
+    <string name="agreement_beeline_condition">Per gli abbonati Beeline, l\'internet nel browser è fornito gratuitamente quando si utilizza la rete domestica (non in roaming)</string>
+    <string name="agreement_other_operators_condition">Per gli abbonati di altri operatori, il traffico internet viene addebitato secondo le condizioni del loro piano tariffario.</string>
+    <string name="agreement_user_agreement">Accordo utente</string>
+    <string name="agreement_checkbox_label">Accetto l\'Accordo utente</string>
+    <string name="agreement_confirm">Conferma</string>
+    <string name="agreement_detail_title">CONDIZIONI DI TRATTAMENTO DEI DATI PERSONALI</string>
+    <string name="agreement_detail_agree_button">ACCETTO E CONFERMO</string>
 </resources>

@@ -226,4 +226,16 @@
     <string name="action_add_to_homescreen">Додај на почетни екран</string>
     <string name="message_added_to_homescreen">Пречица додата на почетни екран</string>
     <string name="action_delete_all_bookmarks">Обриши све обележиваче</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Добро дошли у прегледач</string>
+    <string name="agreement_welcome_description">Пре почетка коришћења, молимо вас да прочитате и прихватите корисничке услове.</string>
+    <string name="agreement_internet_conditions_title">Услови коришћења интернета:</string>
+    <string name="agreement_beeline_condition">За Beeline претплатнике, интернет у прегледачу је бесплатан при коришћењу кућне мреже (не у ромингу)</string>
+    <string name="agreement_other_operators_condition">За претплатнике других оператора, интернет саобраћај се наплаћује према условима тарифног плана.</string>
+    <string name="agreement_user_agreement">Кориснички уговор</string>
+    <string name="agreement_checkbox_label">Слажем се са Корисничким уговором</string>
+    <string name="agreement_confirm">Потврди</string>
+    <string name="agreement_detail_title">УСЛОВИ ОБРАДЕ ЛИЧНИХ ПОДАТАКА</string>
+    <string name="agreement_detail_agree_button">СЛАЖЕМ СЕ И ПОТВРЂУЈЕМ</string>
 </resources>

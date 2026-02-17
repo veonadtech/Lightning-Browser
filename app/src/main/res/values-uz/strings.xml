@@ -320,4 +320,16 @@
 
     <!-- Search -->
     <string name="search_insert_suggestion">Taklifni kiritish</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Brauzerga xush kelibsiz</string>
+    <string name="agreement_welcome_description">Foydalanishni boshlashdan oldin, iltimos, foydalanuvchi shartnomasi bilan tanishing va uni qabul qiling.</string>
+    <string name="agreement_internet_conditions_title">Internetdan foydalanish shartlari:</string>
+    <string name="agreement_beeline_condition">Beeline abonentlari uchun brauzerda internet uy tarmog\'ida foydalanishda bepul taqdim etiladi (rouming emas)</string>
+    <string name="agreement_other_operators_condition">Boshqa operatorlar abonentlari uchun internet-trafik ularning tarif rejasi shartlariga muvofiq to\'lanadi.</string>
+    <string name="agreement_user_agreement">Foydalanuvchi shartnomasi</string>
+    <string name="agreement_checkbox_label">Men Foydalanuvchi shartnomasi bilan roziman</string>
+    <string name="agreement_confirm">Tasdiqlash</string>
+    <string name="agreement_detail_title">SHAXSIY MA\'LUMOTLARNI QAYTA ISHLASH SHARTLARI</string>
+    <string name="agreement_detail_agree_button">ROZIMAN VA TASDIQLAYMAN</string>
 </resources>

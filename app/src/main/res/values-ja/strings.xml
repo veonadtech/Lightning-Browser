@@ -244,4 +244,16 @@
     <string name="dialog_title_close_browser">タブの消去</string>
     <string name="dialog_delete_download">ダウンロードの削除</string>
     <string name="dialog_delete_all_downloads">ダウンロードの全削除</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">ブラウザへようこそ</string>
+    <string name="agreement_welcome_description">ご利用を開始する前に、ユーザー契約をご確認のうえ、同意してください。</string>
+    <string name="agreement_internet_conditions_title">インターネット利用条件：</string>
+    <string name="agreement_beeline_condition">Beeline加入者の場合、ホームネットワーク使用時にブラウザでのインターネットが無料で提供されます（ローミング時を除く）</string>
+    <string name="agreement_other_operators_condition">他の通信事業者の加入者の場合、インターネットトラフィックは料金プランの条件に従って課金されます。</string>
+    <string name="agreement_user_agreement">ユーザー契約</string>
+    <string name="agreement_checkbox_label">ユーザー契約に同意します</string>
+    <string name="agreement_confirm">確認</string>
+    <string name="agreement_detail_title">個人データ処理条件</string>
+    <string name="agreement_detail_agree_button">同意して確認</string>
 </resources>

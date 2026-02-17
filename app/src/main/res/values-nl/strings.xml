@@ -225,4 +225,16 @@
     <string name="action_add_to_homescreen">Voeg aan startscherm toe</string>
     <string name="message_added_to_homescreen">Snelkoppeling aan startscherm toegevoegd</string>
     <string name="action_delete_all_bookmarks">Verwijder alle bladwijzers</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Welkom in de browser</string>
+    <string name="agreement_welcome_description">Lees en accepteer de gebruikersovereenkomst voordat u begint.</string>
+    <string name="agreement_internet_conditions_title">Voorwaarden voor internetgebruik:</string>
+    <string name="agreement_beeline_condition">Voor Beeline-abonnees is internet in de browser gratis bij gebruik van het thuisnetwerk (niet bij roaming)</string>
+    <string name="agreement_other_operators_condition">Voor abonnees van andere operators wordt internetverkeer in rekening gebracht volgens de voorwaarden van hun tariefplan.</string>
+    <string name="agreement_user_agreement">Gebruikersovereenkomst</string>
+    <string name="agreement_checkbox_label">Ik ga akkoord met de Gebruikersovereenkomst</string>
+    <string name="agreement_confirm">Bevestigen</string>
+    <string name="agreement_detail_title">VOORWAARDEN VOOR VERWERKING VAN PERSOONSGEGEVENS</string>
+    <string name="agreement_detail_agree_button">AKKOORD EN BEVESTIGEN</string>
 </resources>

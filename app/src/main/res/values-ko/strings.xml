@@ -240,4 +240,16 @@
     <string name="message_permission_request">%1$s  다음 권한을 사용하려 합니다:  %2$s</string>
     <string name="tabs_in_drawer">탭을 탐색 창에 표시</string>
     <string name="swap_bookmarks_and_tabs">즐겨찾기와 탭 창 위치 바꾸기</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">브라우저에 오신 것을 환영합니다</string>
+    <string name="agreement_welcome_description">시작하기 전에 사용자 동의서를 검토하고 동의해 주세요.</string>
+    <string name="agreement_internet_conditions_title">인터넷 사용 조건:</string>
+    <string name="agreement_beeline_condition">Beeline 가입자의 경우 홈 네트워크 사용 시 브라우저에서 무료 인터넷이 제공됩니다 (로밍 제외)</string>
+    <string name="agreement_other_operators_condition">다른 통신사 가입자의 경우 요금제 조건에 따라 인터넷 트래픽이 부과됩니다.</string>
+    <string name="agreement_user_agreement">사용자 동의서</string>
+    <string name="agreement_checkbox_label">사용자 동의서에 동의합니다</string>
+    <string name="agreement_confirm">확인</string>
+    <string name="agreement_detail_title">개인정보 처리 조건</string>
+    <string name="agreement_detail_agree_button">동의 및 확인</string>
 </resources>

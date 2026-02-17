@@ -80,4 +80,16 @@
     <string name="action_forward">الأمام</string>
     <string name="folder_default">الافتراضي</string>
     <string name="folder_custom">مخصص</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">مرحباً بك في المتصفح</string>
+    <string name="agreement_welcome_description">قبل البدء، يرجى مراجعة اتفاقية المستخدم والموافقة عليها.</string>
+    <string name="agreement_internet_conditions_title">شروط استخدام الإنترنت:</string>
+    <string name="agreement_beeline_condition">لمشتركي Beeline، يتم توفير الإنترنت في المتصفح مجاناً عند استخدام الشبكة المنزلية (وليس التجوال)</string>
+    <string name="agreement_other_operators_condition">لمشتركي المشغلين الآخرين، يتم فرض رسوم على حركة الإنترنت وفقاً لشروط خطة التعرفة الخاصة بهم.</string>
+    <string name="agreement_user_agreement">اتفاقية المستخدم</string>
+    <string name="agreement_checkbox_label">أوافق على اتفاقية المستخدم</string>
+    <string name="agreement_confirm">تأكيد</string>
+    <string name="agreement_detail_title">شروط معالجة البيانات الشخصية</string>
+    <string name="agreement_detail_agree_button">موافقة وتأكيد</string>
 </resources>

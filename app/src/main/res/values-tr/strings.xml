@@ -321,4 +321,16 @@
     <string name="ad_block_load_failure">Ana bilgisayarlar reklam engelleme kaynağından yüklenemedi.</string>
 
     <string name="infinity">∞</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Tarayıcıya hoş geldiniz</string>
+    <string name="agreement_welcome_description">Başlamadan önce lütfen kullanıcı sözleşmesini okuyun ve kabul edin.</string>
+    <string name="agreement_internet_conditions_title">İnternet kullanım koşulları:</string>
+    <string name="agreement_beeline_condition">Beeline aboneleri için tarayıcıdaki internet, ev ağı kullanılırken ücretsiz olarak sağlanır (dolaşımda değil)</string>
+    <string name="agreement_other_operators_condition">Diğer operatörlerin aboneleri için internet trafiği, tarife planlarının koşullarına göre ücretlendirilir.</string>
+    <string name="agreement_user_agreement">Kullanıcı Sözleşmesi</string>
+    <string name="agreement_checkbox_label">Kullanıcı Sözleşmesini kabul ediyorum</string>
+    <string name="agreement_confirm">Onayla</string>
+    <string name="agreement_detail_title">KİŞİSEL VERİLERİN İŞLENME KOŞULLARI</string>
+    <string name="agreement_detail_agree_button">KABUL ET VE ONAYLA</string>
 </resources>

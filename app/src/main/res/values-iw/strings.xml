@@ -10,4 +10,16 @@
     <string name="fullscreen">הפעל מצב מסך מלא</string>
     <string name="java">הפעל JavaScript</string>
 
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">ברוכים הבאים לדפדפן</string>
+    <string name="agreement_welcome_description">לפני שתתחיל, אנא קרא וקבל את הסכם המשתמש.</string>
+    <string name="agreement_internet_conditions_title">תנאי שימוש באינטרנט:</string>
+    <string name="agreement_beeline_condition">עבור מנויי Beeline, האינטרנט בדפדפן מסופק בחינם בעת שימוש ברשת ביתית (לא בנדידה)</string>
+    <string name="agreement_other_operators_condition">עבור מנויים של מפעילים אחרים, תעבורת האינטרנט מחויבת בהתאם לתנאי תוכנית התעריף שלהם.</string>
+    <string name="agreement_user_agreement">הסכם משתמש</string>
+    <string name="agreement_checkbox_label">אני מסכים להסכם המשתמש</string>
+    <string name="agreement_confirm">אישור</string>
+    <string name="agreement_detail_title">תנאי עיבוד נתונים אישיים</string>
+    <string name="agreement_detail_agree_button">מסכים ומאשר</string>
 </resources>

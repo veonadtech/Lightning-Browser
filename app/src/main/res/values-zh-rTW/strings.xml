@@ -285,4 +285,16 @@
     </plurals>
     <string name="notification_incognito_running_message">點觸以開啟</string>
     <string name="notification_incognito_running_description">正在顯示無痕通知</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">歡迎使用瀏覽器</string>
+    <string name="agreement_welcome_description">開始使用前，請閱讀並接受使用者協議。</string>
+    <string name="agreement_internet_conditions_title">網路使用條款：</string>
+    <string name="agreement_beeline_condition">Beeline 用戶在使用家庭網路時（非漫遊），瀏覽器中的網路免費提供</string>
+    <string name="agreement_other_operators_condition">其他運營商的用戶，網路流量按其資費方案的條款收費。</string>
+    <string name="agreement_user_agreement">使用者協議</string>
+    <string name="agreement_checkbox_label">我同意使用者協議</string>
+    <string name="agreement_confirm">確認</string>
+    <string name="agreement_detail_title">個人資料處理條款</string>
+    <string name="agreement_detail_agree_button">同意並確認</string>
 </resources>

@@ -235,4 +235,16 @@
 
     <string name="problem_download">La dirección no es válida, no se pudo descargar</string>
     <string name="problem_location_download">No se pudo descargar en la localización específica</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Bienvenido al navegador</string>
+    <string name="agreement_welcome_description">Antes de comenzar, por favor lea y acepte el acuerdo de usuario.</string>
+    <string name="agreement_internet_conditions_title">Condiciones de uso de internet:</string>
+    <string name="agreement_beeline_condition">Para los suscriptores de Beeline, el internet en el navegador se proporciona de forma gratuita al usar la red doméstica (no en roaming)</string>
+    <string name="agreement_other_operators_condition">Para los suscriptores de otros operadores, el tráfico de internet se cobra según las condiciones de su plan tarifario.</string>
+    <string name="agreement_user_agreement">Acuerdo de usuario</string>
+    <string name="agreement_checkbox_label">Acepto el Acuerdo de usuario</string>
+    <string name="agreement_confirm">Confirmar</string>
+    <string name="agreement_detail_title">CONDICIONES DE PROCESAMIENTO DE DATOS PERSONALES</string>
+    <string name="agreement_detail_agree_button">ACEPTAR Y CONFIRMAR</string>
 </resources>

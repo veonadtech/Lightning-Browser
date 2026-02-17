@@ -249,4 +249,16 @@
     <string name="dialog_rename_folder">Renomear pasta</string>
     <string name="dialog_remove_folder">Remover pasta</string>
     <string name="dialog_title_close_browser">Fechar navegador</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Bem-vindo ao navegador</string>
+    <string name="agreement_welcome_description">Antes de começar, por favor, leia e aceite o contrato do utilizador.</string>
+    <string name="agreement_internet_conditions_title">Termos de utilização da internet:</string>
+    <string name="agreement_beeline_condition">Para assinantes Beeline, a internet no navegador é fornecida gratuitamente ao usar a rede doméstica (não em roaming)</string>
+    <string name="agreement_other_operators_condition">Para assinantes de outras operadoras, o tráfego de internet é cobrado de acordo com os termos do plano tarifário.</string>
+    <string name="agreement_user_agreement">Contrato do Utilizador</string>
+    <string name="agreement_checkbox_label">Concordo com o Contrato do Utilizador</string>
+    <string name="agreement_confirm">Confirmar</string>
+    <string name="agreement_detail_title">TERMOS DE PROCESSAMENTO DE DADOS PESSOAIS</string>
+    <string name="agreement_detail_agree_button">CONCORDAR E CONFIRMAR</string>
 </resources>

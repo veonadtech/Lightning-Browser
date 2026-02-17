@@ -319,4 +319,16 @@
 
     <!-- Search -->
     <string name="search_insert_suggestion">插入搜索建议</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">欢迎使用浏览器</string>
+    <string name="agreement_welcome_description">开始使用前，请阅读并接受用户协议。</string>
+    <string name="agreement_internet_conditions_title">互联网使用条款：</string>
+    <string name="agreement_beeline_condition">Beeline 用户在使用家庭网络时（非漫游），浏览器中的互联网免费提供</string>
+    <string name="agreement_other_operators_condition">其他运营商的用户，互联网流量按其资费方案的条款收费。</string>
+    <string name="agreement_user_agreement">用户协议</string>
+    <string name="agreement_checkbox_label">我同意用户协议</string>
+    <string name="agreement_confirm">确认</string>
+    <string name="agreement_detail_title">个人数据处理条款</string>
+    <string name="agreement_detail_agree_button">同意并确认</string>
 </resources>

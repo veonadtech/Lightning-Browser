@@ -253,4 +253,16 @@
 		<item>Pełny URL</item>
 		<item>Tytuł strony</item>
 	</string-array>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Witamy w przeglądarce</string>
+    <string name="agreement_welcome_description">Przed rozpoczęciem korzystania zapoznaj się z umową użytkownika i zaakceptuj ją.</string>
+    <string name="agreement_internet_conditions_title">Warunki korzystania z internetu:</string>
+    <string name="agreement_beeline_condition">Dla abonentów Beeline internet w przeglądarce jest bezpłatny podczas korzystania z sieci domowej (nie w roamingu)</string>
+    <string name="agreement_other_operators_condition">Dla abonentów innych operatorów ruch internetowy jest naliczany zgodnie z warunkami ich planu taryfowego.</string>
+    <string name="agreement_user_agreement">Umowa użytkownika</string>
+    <string name="agreement_checkbox_label">Zgadzam się z Umową użytkownika</string>
+    <string name="agreement_confirm">Potwierdź</string>
+    <string name="agreement_detail_title">WARUNKI PRZETWARZANIA DANYCH OSOBOWYCH</string>
+    <string name="agreement_detail_agree_button">ZGADZAM SIĘ I POTWIERDZAM</string>
 </resources>
