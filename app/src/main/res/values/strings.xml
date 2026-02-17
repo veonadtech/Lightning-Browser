@@ -352,4 +352,18 @@
     <string name="traffic_mobile">Mobile</string>
     <string name="traffic_roaming">Roaming</string>
     <string name="traffic_unknown">Unknown</string>
+
+    <!-- Agreement screen -->
+    <string name="agreement_welcome_title">Добро пожаловать в браузер</string>
+    <string name="agreement_welcome_description">Перед началом использования, пожалуйста, ознакомьтесь и примите пользовательское соглашение.</string>
+    <string name="agreement_internet_conditions_title">Условия использования интернета:</string>
+    <string name="agreement_beeline_condition">Для абонентов Beeline интернет в браузере предоставляется бесплатно при использовании в домашней сети (не в роуминге)</string>
+    <string name="agreement_other_operators_condition">Для абонентов других операторов интернет-трафик оплачивается согласно условиям их тарифного плана.</string>
+    <string name="agreement_user_agreement">Пользовательское соглашение</string>
+    <string name="agreement_checkbox_label">Я согласен с Пользовательским соглашением</string>
+    <string name="agreement_confirm">Подтвердить</string>
+
+    <!-- Agreement detail screen -->
+    <string name="agreement_detail_title">УСЛОВИЯ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</string>
+    <string name="agreement_detail_agree_button">СОГЛАСИТЬСЯ И ПОДТВЕРДИТЬ</string>
 </resources>

@@ -19,6 +19,8 @@ import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import acr.browser.lightning.DefaultBrowserActivity
 import acr.browser.lightning.R
+import acr.browser.lightning.preference.AppPreferenceManager
+import acr.browser.lightning.ui.agreement.AgreementActivity
 import acr.browser.lightning.ui.theme.Primary
 import kotlinx.coroutines.delay
 
@@ -32,7 +34,13 @@ class SplashActivity : ComponentActivity() {
         setContent {
             LaunchedEffect(Unit) {
                 delay(1500)
-                startActivity(Intent(this@SplashActivity, DefaultBrowserActivity::class.java))
+                val prefManager = AppPreferenceManager.getInstance(this@SplashActivity)
+                val destination = if (prefManager.agreementAccepted) {
+                    DefaultBrowserActivity::class.java
+                } else {
+                    AgreementActivity::class.java
+                }
+                startActivity(Intent(this@SplashActivity, destination))
                 finish()
             }
 

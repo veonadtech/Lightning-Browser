@@ -57,6 +57,11 @@
         </activity>
 
         <activity
+            android:name="acr.browser.lightning.ui.agreement.AgreementActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
             android:name="acr.browser.lightning.DefaultBrowserActivity"
             android:alwaysRetainTaskState="true"
             android:clearTaskOnLaunch="false"
