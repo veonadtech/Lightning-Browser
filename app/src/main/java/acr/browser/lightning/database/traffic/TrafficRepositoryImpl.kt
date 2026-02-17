@@ -47,6 +47,14 @@ class TrafficRepositoryImpl @Inject constructor(
         return trafficDao.getMonthlyTraffic(startOfMonth, endOfMonth)
     }
 
+    override fun getDailyTrafficByNetworkTypeFlow(startOfDay: Long, endOfDay: Long, networkType: String): Flow<TrafficSummary> {
+        return trafficDao.getDailyTrafficByNetworkTypeFlow(startOfDay, endOfDay, networkType)
+    }
+
+    override fun getMonthlyTrafficByNetworkTypeFlow(startOfMonth: Long, endOfMonth: Long, networkType: String): Flow<TrafficSummary> {
+        return trafficDao.getMonthlyTrafficByNetworkTypeFlow(startOfMonth, endOfMonth, networkType)
+    }
+
     override suspend fun getTrafficByNetworkType(networkType: String): TrafficSummary {
         return trafficDao.getTrafficByNetworkType(networkType)
     }

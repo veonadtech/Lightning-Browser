@@ -24,7 +24,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="150dp"
+            android:minWidth="180dp"
             android:orientation="vertical"
             android:padding="12dp">
 
@@ -44,6 +44,7 @@
                 android:layout_marginBottom="6dp"
                 android:background="@android:color/darker_gray" />
 
+            <!-- Session -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,10 +68,63 @@
                     tools:text="1.2 MB" />
             </LinearLayout>
 
+            <!-- Session WiFi -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/traffic_wifi"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/traffic_session_wifi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    tools:text="800 KB" />
+            </LinearLayout>
+
+            <!-- Session Mobile -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/traffic_mobile"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/traffic_session_mobile_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    tools:text="400 KB" />
+            </LinearLayout>
+
+            <!-- Daily -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -91,10 +145,63 @@
                     tools:text="15.3 MB" />
             </LinearLayout>
 
+            <!-- Daily WiFi -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/traffic_wifi"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/traffic_daily_wifi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    tools:text="10 MB" />
+            </LinearLayout>
+
+            <!-- Daily Mobile -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/traffic_mobile"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/traffic_daily_mobile_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    tools:text="5.3 MB" />
+            </LinearLayout>
+
+            <!-- Monthly -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -113,6 +220,58 @@
                     android:textSize="12sp"
                     android:textStyle="bold"
                     tools:text="256.7 MB" />
+            </LinearLayout>
+
+            <!-- Monthly WiFi -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/traffic_wifi"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/traffic_monthly_wifi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    tools:text="200 MB" />
+            </LinearLayout>
+
+            <!-- Monthly Mobile -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/traffic_mobile"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/traffic_monthly_mobile_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="#FF666666"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    tools:text="56 MB" />
             </LinearLayout>
 
             <LinearLayout

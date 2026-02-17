@@ -97,6 +97,28 @@ interface TrafficDao {
     suspend fun getMonthlyTraffic(startOfMonth: Long, endOfMonth: Long): TrafficSummary
 
     /**
+     * Get daily traffic by network type as Flow
+     */
+    @Query("""
+        SELECT COALESCE(SUM(bytesReceived), 0) as totalBytesReceived,
+               COALESCE(SUM(bytesSent), 0) as totalBytesSent
+        FROM traffic_sessions
+        WHERE timestamp >= :startOfDay AND timestamp <= :endOfDay AND networkType = :networkType
+    """)
+    fun getDailyTrafficByNetworkTypeFlow(startOfDay: Long, endOfDay: Long, networkType: String): Flow<TrafficSummary>
+
+    /**
+     * Get monthly traffic by network type as Flow
+     */
+    @Query("""
+        SELECT COALESCE(SUM(bytesReceived), 0) as totalBytesReceived,
+               COALESCE(SUM(bytesSent), 0) as totalBytesSent
+        FROM traffic_sessions
+        WHERE timestamp >= :startOfMonth AND timestamp <= :endOfMonth AND networkType = :networkType
+    """)
+    fun getMonthlyTrafficByNetworkTypeFlow(startOfMonth: Long, endOfMonth: Long, networkType: String): Flow<TrafficSummary>
+
+    /**
      * Get traffic by network type
      */
     @Query("""

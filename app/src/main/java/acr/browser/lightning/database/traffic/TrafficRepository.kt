@@ -48,6 +48,16 @@ interface TrafficRepository {
     suspend fun getMonthlyTraffic(startOfMonth: Long, endOfMonth: Long): TrafficSummary
 
     /**
+     * Get daily traffic by network type as Flow
+     */
+    fun getDailyTrafficByNetworkTypeFlow(startOfDay: Long, endOfDay: Long, networkType: String): Flow<TrafficSummary>
+
+    /**
+     * Get monthly traffic by network type as Flow
+     */
+    fun getMonthlyTrafficByNetworkTypeFlow(startOfMonth: Long, endOfMonth: Long, networkType: String): Flow<TrafficSummary>
+
+    /**
      * Get traffic by network type
      */
     suspend fun getTrafficByNetworkType(networkType: String): TrafficSummary

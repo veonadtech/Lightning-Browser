@@ -53,6 +53,10 @@ class TrafficMonitor @Inject constructor(
     private val _sessionTraffic = MutableStateFlow(TrafficSummary(0, 0))
     val sessionTraffic: StateFlow<TrafficSummary> = _sessionTraffic.asStateFlow()
 
+    // Per-network session traffic
+    private val _sessionWifiTraffic = MutableStateFlow(TrafficSummary(0, 0))
+    private val _sessionMobileTraffic = MutableStateFlow(TrafficSummary(0, 0))
+
     // Daily traffic flow
     val dailyTraffic: Flow<TrafficSummary> by lazy {
         val (startOfDay, endOfDay) = getDayBounds()
@@ -70,22 +74,43 @@ class TrafficMonitor @Inject constructor(
         val (startOfDay, endOfDay) = getDayBounds()
         val (startOfMonth, endOfMonth) = getMonthBounds()
 
-        combine(
-            _sessionTraffic,
+        val sessionCombined = combine(
+            _sessionTraffic, _sessionWifiTraffic, _sessionMobileTraffic
+        ) { total, wifi, mobile -> NetworkTrafficBreakdown(total, wifi, mobile) }
+
+        val dailyCombined = combine(
             trafficRepository.getDailyTrafficFlow(startOfDay, endOfDay),
-            trafficRepository.getMonthlyTrafficFlow(startOfMonth, endOfMonth)
-        ) { session, daily, monthly ->
+            trafficRepository.getDailyTrafficByNetworkTypeFlow(startOfDay, endOfDay, NetworkType.WIFI),
+            trafficRepository.getDailyTrafficByNetworkTypeFlow(startOfDay, endOfDay, NetworkType.MOBILE)
+        ) { total, wifi, mobile -> NetworkTrafficBreakdown(total, wifi, mobile) }
+
+        val monthlyCombined = combine(
+            trafficRepository.getMonthlyTrafficFlow(startOfMonth, endOfMonth),
+            trafficRepository.getMonthlyTrafficByNetworkTypeFlow(startOfMonth, endOfMonth, NetworkType.WIFI),
+            trafficRepository.getMonthlyTrafficByNetworkTypeFlow(startOfMonth, endOfMonth, NetworkType.MOBILE)
+        ) { total, wifi, mobile -> NetworkTrafficBreakdown(total, wifi, mobile) }
+
+        combine(sessionCombined, dailyCombined, monthlyCombined) { session, daily, monthly ->
             TrafficStats(session, daily, monthly)
         }
     }
 
     /**
+     * Traffic breakdown by network type
+     */
+    data class NetworkTrafficBreakdown(
+        val total: TrafficSummary,
+        val wifi: TrafficSummary,
+        val mobile: TrafficSummary
+    )
+
+    /**
      * Combined traffic statistics
      */
     data class TrafficStats(
-        val session: TrafficSummary,
-        val daily: TrafficSummary,
-        val monthly: TrafficSummary
+        val session: NetworkTrafficBreakdown,
+        val daily: NetworkTrafficBreakdown,
+        val monthly: NetworkTrafficBreakdown
     )
 
     /**
@@ -100,6 +125,11 @@ class TrafficMonitor @Inject constructor(
 
         // Generate new session ID
         currentSessionId = UUID.randomUUID().toString()
+
+        // Reset session traffic counters
+        _sessionTraffic.value = TrafficSummary(0, 0)
+        _sessionWifiTraffic.value = TrafficSummary(0, 0)
+        _sessionMobileTraffic.value = TrafficSummary(0, 0)
 
         monitoringJob = scope.launch {
             while (isActive) {
@@ -167,6 +197,24 @@ class TrafficMonitor @Inject constructor(
                 totalBytesReceived = currentSession.totalBytesReceived + deltaRx,
                 totalBytesSent = currentSession.totalBytesSent + deltaTx
             )
+
+            // Update per-network session traffic
+            when (networkInfo.type) {
+                NetworkType.WIFI -> {
+                    val current = _sessionWifiTraffic.value
+                    _sessionWifiTraffic.value = TrafficSummary(
+                        totalBytesReceived = current.totalBytesReceived + deltaRx,
+                        totalBytesSent = current.totalBytesSent + deltaTx
+                    )
+                }
+                NetworkType.MOBILE -> {
+                    val current = _sessionMobileTraffic.value
+                    _sessionMobileTraffic.value = TrafficSummary(
+                        totalBytesReceived = current.totalBytesReceived + deltaRx,
+                        totalBytesSent = current.totalBytesSent + deltaTx
+                    )
+                }
+            }
         }
 
         // Update previous values

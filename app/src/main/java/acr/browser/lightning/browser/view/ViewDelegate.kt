@@ -97,9 +97,21 @@ interface ViewDelegate {
 
     val trafficSessionValue: TextView?
 
+    val trafficSessionWifiValue: TextView?
+
+    val trafficSessionMobileValue: TextView?
+
     val trafficDailyValue: TextView?
 
+    val trafficDailyWifiValue: TextView?
+
+    val trafficDailyMobileValue: TextView?
+
     val trafficMonthlyValue: TextView?
+
+    val trafficMonthlyWifiValue: TextView?
+
+    val trafficMonthlyMobileValue: TextView?
 
     val trafficNetworkType: TextView?
 

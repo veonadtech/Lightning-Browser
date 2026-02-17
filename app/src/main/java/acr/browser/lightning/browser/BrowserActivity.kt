@@ -401,9 +401,15 @@ abstract class BrowserActivity : ThemableBrowserActivity() {
         // Observe traffic stats and update UI
         lifecycleScope.launch {
             trafficMonitor.trafficStats.collect { stats ->
-                binding.trafficSessionValue?.text = TrafficFormatter.format(stats.session)
-                binding.trafficDailyValue?.text = TrafficFormatter.format(stats.daily)
-                binding.trafficMonthlyValue?.text = TrafficFormatter.format(stats.monthly)
+                binding.trafficSessionValue?.text = TrafficFormatter.format(stats.session.total)
+                binding.trafficSessionWifiValue?.text = TrafficFormatter.format(stats.session.wifi)
+                binding.trafficSessionMobileValue?.text = TrafficFormatter.format(stats.session.mobile)
+                binding.trafficDailyValue?.text = TrafficFormatter.format(stats.daily.total)
+                binding.trafficDailyWifiValue?.text = TrafficFormatter.format(stats.daily.wifi)
+                binding.trafficDailyMobileValue?.text = TrafficFormatter.format(stats.daily.mobile)
+                binding.trafficMonthlyValue?.text = TrafficFormatter.format(stats.monthly.total)
+                binding.trafficMonthlyWifiValue?.text = TrafficFormatter.format(stats.monthly.wifi)
+                binding.trafficMonthlyMobileValue?.text = TrafficFormatter.format(stats.monthly.mobile)
             }
         }
 
