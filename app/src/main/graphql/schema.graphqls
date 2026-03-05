@@ -1,0 +1,32 @@
+type Query {
+    userConsent(id: Int, user_id: String, device_id: String!): UserConsent
+    userConsents: [UserConsent]
+    userSetting(id: Int, user_id: String, device_id: String!): UserSettings
+    userSettings: [UserSettings]
+}
+
+type Mutation {
+    saveUserConsent(id: Int, user_id: String, device_id: String, consent_given: Int): UserConsent
+    deleteUserConsent(id: Int!): Boolean
+    saveUserSettings(id: Int, user_id: String, device_id: String, withdrawal_option_visible: Int): UserSettings
+    deleteUserSettings(id: Int): Boolean
+}
+
+type UserConsent {
+    id: Int
+    user_id: String
+    device_id: String
+    consent_given: Int
+    consent_timestamp: String
+    consent_withdrawn_timestamp: String
+    created_at: Int
+    updated_at: Int
+    deleted_at: Int
+}
+
+type UserSettings {
+    id: Int
+    user_id: String
+    device_id: String
+    withdrawal_option_visible: Int
+}

@@ -10,6 +10,7 @@ plugins {
     id("com.google.devtools.ksp") version "2.2.21-2.0.4"
     id("com.anthonycr.plugins.mezzanine") version "2.2.0"
     id("com.google.gms.google-services")
+    id("com.apollographql.apollo") version "4.4.1"
 }
 
 android {
@@ -154,6 +155,9 @@ dependencies {
     implementation("io.coil-kt.coil3:coil:3.3.0")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0")
 
+    // Apollo GraphQL
+    implementation("com.apollographql.apollo:apollo-runtime:4.4.1")
+
     // rx
     implementation("io.reactivex.rxjava3:rxjava:3.1.12")
     implementation("io.reactivex.rxjava3:rxandroid:3.0.2")
@@ -183,6 +187,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.activity:activity-compose:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.9.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.0")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
@@ -214,4 +219,12 @@ kotlin {
 java {
     targetCompatibility = JavaVersion.VERSION_17
     sourceCompatibility = JavaVersion.VERSION_17
+}
+
+apollo {
+    service("api") {
+        packageName.set("acr.browser.lightning.graphql")
+        schemaFiles.from("src/main/graphql/schema.graphqls")
+        srcDir("src/main/graphql")
+    }
 }

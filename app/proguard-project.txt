@@ -67,3 +67,7 @@
 
 -dontwarn androidx.window.extensions.**
 -dontwarn androidx.window.sidecar.**
+
+# Apollo GraphQL
+-keep class acr.browser.lightning.graphql.** { *; }
+-dontwarn com.apollographql.apollo.**

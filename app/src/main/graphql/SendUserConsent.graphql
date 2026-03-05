@@ -1,0 +1,7 @@
+mutation SendUserConsent($user_id: String, $device_id: String, $consent_given: Int) {
+    saveUserConsent(user_id: $user_id, device_id: $device_id, consent_given: $consent_given) {
+        id
+        consent_given
+        consent_timestamp
+    }
+}

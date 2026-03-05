@@ -18,6 +18,8 @@ import acr.browser.lightning.database.history.HistoryDatabase
 import acr.browser.lightning.database.history.HistoryRepository
 import acr.browser.lightning.database.traffic.TrafficRepository
 import acr.browser.lightning.database.traffic.TrafficRepositoryImpl
+import acr.browser.lightning.network.graphql.ApolloGraphQlDataSource
+import acr.browser.lightning.network.graphql.GraphQlDataSource
 import acr.browser.lightning.ssl.SessionSslWarningPreferences
 import acr.browser.lightning.ssl.SslWarningPreferences
 import dagger.Binds
@@ -58,4 +60,7 @@ interface AppBindsModule {
 
     @Binds
     fun bindsTrafficRepository(trafficRepositoryImpl: TrafficRepositoryImpl): TrafficRepository
+
+    @Binds
+    fun bindsGraphQlDataSource(apolloGraphQlDataSource: ApolloGraphQlDataSource): GraphQlDataSource
 }

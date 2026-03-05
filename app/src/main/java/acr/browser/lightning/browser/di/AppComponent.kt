@@ -17,6 +17,7 @@ import acr.browser.lightning.settings.fragment.DisplaySettingsFragment
 import acr.browser.lightning.settings.fragment.GeneralSettingsFragment
 import acr.browser.lightning.settings.fragment.PrivacySettingsFragment
 import acr.browser.lightning.settings.fragment.RootSettingsFragment
+import acr.browser.lightning.ui.agreement.AgreementActivity
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
@@ -24,7 +25,7 @@ import dagger.Module
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AppModule::class, AppBindsModule::class, Submodules::class])
+@Component(modules = [AppModule::class, AppBindsModule::class, GraphQlModule::class, Submodules::class])
 interface AppComponent {
 
     @Component.Builder
@@ -66,6 +67,8 @@ interface AppComponent {
     fun inject(displaySettingsFragment: DisplaySettingsFragment)
 
     fun inject(adBlockSettingsFragment: AdBlockSettingsFragment)
+
+    fun inject(agreementActivity: AgreementActivity)
 
     fun provideBloomFilterAdBlocker(): BloomFilterAdBlocker
 
